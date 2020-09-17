@@ -9,10 +9,17 @@ encode,decode
 replace(old,new,count)、count(sub,start,end)
 isdigit()、startswith
 split、join  '-'.join('我爱你中国')
+隔位截取str1[::2]  = str1[0:-1:2] start 和end不写时为全部；step=2 如果 step为负数时，倒序截取； 
 '''
 str1 = 'hello'
 a = 'a'
 b = 'b'
+
+
+def stringEncode(str):
+    myBytes = str.encode(encoding='utf-8')
+    return myBytes
+
 
 if __name__ == "__main__":
     print(len(str1))
@@ -20,7 +27,8 @@ if __name__ == "__main__":
     print('中国' < '美国')  #utf-8中 美比中大
     print(str1[2:])
     print(str1.upper())
-    myBytes = '我爱你中国'.encode(encoding='utf-8')
-    print(myBytes.decode(encoding='utf-8'))
+    sEncode = stringEncode('我爱你中国')
+    print(sEncode.decode(encoding='utf-8'))
     print(str1.find('7'))
+    print(str1[::-1])
     pass
