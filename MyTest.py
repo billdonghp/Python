@@ -6,7 +6,7 @@
 
 # from模块import 成员(变量、函数、类)
 from Person import Person
-import time
+import calendar
 
 
 # 水仙花数 也称超完全数字不变数
@@ -22,9 +22,4 @@ if __name__ == '__main__':
     # p = Person("尔阿康", 30, 1000)
     # p.tell()
     # narcissisticNumber()
-    print(time.time())
-    print(time.localtime()[0])
-    print(time.gmtime())
-    print(time.ctime())
-    print(time.asctime())
-    print(time.strftime('%Y-%m-%d %X', time.localtime()))
+    print(calendar.month(2020, 10))
