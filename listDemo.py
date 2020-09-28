@@ -73,6 +73,9 @@ def builtinFuncs():
     print(dlist)
     print(list('hello'))  # 将iterable（容器或字符串）类型转换为列表
     print(list((1, 2, 3)))
+    # 求和
+    print(sum([1, 2, 3]))
+    print(sum([1, 2, 3], 2))
 
 
 # list常用函数
@@ -124,4 +127,4 @@ if __name__ == "__main__":
     # listFuncs()
     # zipList()
     # reversedIterater()
-    print(mlist)
+    # print(mlist)
