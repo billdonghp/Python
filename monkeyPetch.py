@@ -10,6 +10,24 @@ def monkeyPetch():
         sum = (sum + 1) * 2
     return sum
 
+def eatPeach():
+    peach = 1
+    print('猴子第10天还剩下1个桃子')
+    for i in range(9,0,-1):
+        peach = (peach+1)*2
+        print('猴子第%d天还有%d个桃子'%(i,peach))
+    print('猴子一共摘了%d个桃子'%peach)
+
+def whilePeatch():
+    sum = 1
+    days = 1
+    while days < 10:
+        sum = (sum+1) * 2
+        days = days + 1
+    return sum
 
 if __name__ == "__main__":
-    print(monkeyPetch())
+    # print(monkeyPetch())
+    # print(whilePeatch())
+    #eatPeach()
+    

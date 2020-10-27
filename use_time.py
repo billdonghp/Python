@@ -19,5 +19,20 @@ def timeDemo():
     # %a星期 %b 月（%A%B%完整星期、月）  %d：mday  %H  hour %M 分 %S 秒 %X=%H:%M:%S
 
 
+def getMonths(str1):
+    curTime = time.localtime()
+    strTime = time.strptime(str1,'%Y-%m-%d')
+    curMonth = int(time.strftime('%m',curTime))
+    strMonth = int(time.strftime('%m',strTime))
+    curYear = int(time.strftime('%Y',curTime))
+    strYear = int(time.strftime('%Y',strTime))
+    if strYear > curYear:
+        return 12*(strYear - curYear) + (strMonth - curMonth)
+    elif strYear == curYear and strMonth > curMonth:
+        return strMonth - curMonth 
+    else:
+        return 0
+
 if __name__ == "__main__":
-    timeDemo()
+    # timeDemo()
+    print(getMonths('2020-09-22'))
